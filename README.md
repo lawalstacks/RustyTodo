@@ -1,129 +1,116 @@
-# Build a Full-Stack To-Do List App with Rust Backend and Next.js Frontend | Rust Project
 
-Build a Full-Stack To-Do List App with Rust Backend and Next.js Frontend | Rust Project
+---
 
-In this comprehensive tutorial, we'll guide you through building a full-stack to-do list application from scratch using Rust for the backend and Next.js for the frontend. Whether you're new to these technologies or looking to enhance your skills, this video covers everything you need to know to create a robust and efficient to-do list app.
+# RustyTodo  
 
-What You'll Learn:
+**RustyTodo** is a high-performance task management application built with **Rust** for the backend and **Next.js** for the frontend. This project combines the speed and safety of Rust with the server-rendering capabilities of Next.js, delivering an efficient and intuitive experience for managing todos.  
 
-- Setting up a Rust backend with Actix-web
-- Implementing database operations using Diesel ORM
-- Creating RESTful APIs in Rust
-- Building a modern frontend with Next.js and React
-- Fetching data from the backend using React Query
-- Managing application state and UI with Next.js
+---
 
-## Project Overview
+## Features  
 
-![alt text](https://www.daulathussain.com/wp-content/uploads/2024/06/Build-a-Full-Stack-To-Do-List-App-with-Rust-Backend-and-Next.js-Frontend-Rust-Project.jpg)
+- **High Performance**: Backend built with Rust's Actix Web framework for blazing-fast API responses.  
+- **Server-Side Rendering (SSR)**: Next.js ensures faster load times and improved SEO.  
+- **Full Task Management**: Add, edit, delete, search, and mark tasks as completed.  
+- **Responsive Design**: Works seamlessly across devices.  
+- **Dynamic Routing**: Efficient routing for individual tasks and categories.  
 
-## Instruction
+---
 
-Kindly follow the following Instructions to run the project in your system and install the necessary requirements
+## Technologies Used  
 
-- [Final Source Code](https://www.theblockchaincoders.com/sourceCode/build-a-full-stack-to-do-list-app-with-rust-backend-and-next.js-frontend)
+### Backend  
+- **Language**: Rust  
+- **Framework**: Actix Web  
+- **Database**: Mutex for in-memory storage (extendable to databases like PostgreSQL).  
 
-#### Setup Video
+### Frontend  
+- **Framework**: Next.js (React-based)  
+- **Styling**: Custom CSS   
+- **API Communication**: Axios for REST API calls  
 
-- [Final Code Setup video](https://youtu.be/hLu-YGQ5Eas)
+---
 
-```https://code.visualstudio.com/download
-  WATCH: Setup & Demo Of Project
-```
+## Installation  
 
-#### Install Vs Code Editor
+### Prerequisites  
+Ensure you have the following installed:  
+- Rust (latest stable version)  
+- Node.js (16.x or later)  
+- npm or yarn  
 
-```https://code.visualstudio.com/download
-  GET: VsCode Editor
-```
+### Backend Setup  
+1. Clone the repository:  
+   ```bash  
+   git clone https://github.com/your-username/RustyTodo.git  
+   cd RustyTodo/backend  
+   ```  
+2. cd into the rust folder and run the Rust server:  
+   ```bash  
+   cargo run  
+   ```  
+3. The server will start on `http://127.0.0.1:8080`.  
 
-#### INSTALL RUST
+### Frontend Setup  
+1. Navigate out to the main folderthe frontend directory:  
+   Install dependencies:  
+   ```bash  
+   npm install  
+   ```  
+2. Start the development server:  
+   ```bash  
+   npm run dev  
+   ```  
+3. Open your browser and go to `http://localhost:3000`.  
 
-```https://nodejs.org/en/download
-  RUST: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
+---
 
-#### INSTALL DOC
+## API Endpoints  
 
-```https://doc.rust-lang.org/book/
-  RUST DOC: https://doc.rust-lang.org/book/
-```
+### Todos API  
+- **GET /todos**: Retrieve all todos.  
+- **POST /todos**: Create a new todo.  
+  - **Body**: `{ "title": "string", "completed": false }`  
+- **PUT /todos/{id}**: Update a todo by ID.  
+  - **Body**: `{ "title": "string", "completed": true/false }`  
+- **DELETE /todos/{id}**: Delete a todo by ID.  
 
-#### PROJECT STRUCTURE
+---
 
-```https://doc.rust-lang.org/book/
-  todo_list
-      ├── Cargo.toml
-      └── src
-          └── main.rs
-```
+## Usage  
 
-#### BUILD & RUN COMMAND (BACKEND)
+1. Open the app in your browser.  
+2. Add tasks using the input box and "Add" button.  
+3. Edit tasks by clicking the edit icon.  
+4. Mark tasks as completed by checking the box.  
+5. Search for specific tasks using the search bar.  
 
-```https://doc.rust-lang.org/book/
- COMMAND:  cargo run
-```
+---
 
-#### FRONTEND COMMAND
+## Contributing  
 
-```https://doc.rust-lang.org/book/
- COMMAND:  npx run
-```
+We welcome contributions! To get started:  
+1. Fork the repository.  
+2. Create a new branch: `git checkout -b feature-name`.  
+3. Commit your changes: `git commit -m "Add feature-name"`.  
+4. Push to the branch: `git push origin feature-name`.  
+5. Open a pull request.  
 
-#### INSTALL EXTENSION
+---
 
-```https://doc.rust-lang.org/book/
- COMMAND:  rust-analyzer
-```
+## License  
 
-#### PACKAGES
+This project is licensed under the [MIT License](LICENSE).  
 
-```https://doc.rust-lang.org/book/
-    [package]
-      name = "todo-backend"
-      version = "0.1.0"
-      edition = "2018"
+---
 
-      [dependencies]
-      actix-web = "4"
-      actix-cors = "0.6"
-      serde = { version = "1.0", features = ["derive"] }
-      uuid = { version = "1.0", features = ["serde", "v4"] }
-      chrono = { version = "0.4", features = ["serde"] }
-```
+## Contact  
 
-#### Clone Starter File
+For questions or support, reach out to:  
+**Your Name**  Kazeem Lawal
+**Email**: quazeemastic@gmail.com  
+**GitHub**: [lawalstacks](https://github.com/lawalstacks)  
 
-```https://github.com/daulathussain/Airdrop-Crypto-Starter-File
-  GET: Project Starter File Download
-```
+---  
 
-All you need to follow the complete project and follow the instructions which are explained in the tutorial by Daulat
-
-## Final Code Instruction
-
-If you download the final source code then you can follow the following instructions to run the Dapp successfully
-
-#### Setup Video
-
-```https://code.visualstudio.com/download
-  WATCH: Setup & Demo Of Project
-```
-
-#### Final Source Code
-
-```https://www.theblockchaincoders.com/SourceCode
-  Download the Final Source Code
-```
-
-## Important Links
-
-- [Get Pro Blockchain Developer Course](https://www.theblockchaincoders.com/pro-nft-marketplace)
-- [Support Creator](https://bit.ly/Support-Creator)
-- [All Projects Source Code](https://www.theblockchaincoders.com/SourceCode)
-
-## Authors
-
-- [@theblockchaincoders.com](https://www.theblockchaincoders.com/)
-- [@consultancy](https://www.theblockchaincoders.com/consultancy)
-- [@youtube](https://www.youtube.com/@daulathussain)
+**RustyTodo**: Manage your tasks efficiently with the power of Rust and Next.js! 🚀  
