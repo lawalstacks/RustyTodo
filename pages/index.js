@@ -113,7 +113,7 @@ await axios.delete(`http://127.0.0.1:8080/todos/${id}`);
     const date = new Date(dateString);
     return isNaN(date.getTime())
      ? "Invalid date"
-     : format(date,"yyyy-MM-dd HH:mm:ss");
+     : format(date,"PPPpp");
     }catch(error){
       console.log(error);
     }
@@ -124,9 +124,10 @@ await axios.delete(`http://127.0.0.1:8080/todos/${id}`);
       <li key={index} className="li">
         <CheckBox toggleCompleted={toggleCompleted} index={index} todo={todo}/>
         <label htmlFor="" className="form-check-label"></label>
-        <span className="todo-text">
-          {`${todo.title} ${formatDate(todo.created_at)}`}
-        </span>
+        
+        <p className="todo-text">
+          <span>{todo.title}</span><span className="todo-date">{formatDate(todo.created_at)}</span>
+        </p>
         <span 
         className="span-button"
         onClick={()=>deleteTodo(todo.id)}>
@@ -182,7 +183,12 @@ await axios.delete(`http://127.0.0.1:8080/todos/${id}`);
   return (
   <div className="main-body">
     <div className="todo-app">
-      <h1 className="todo-h1">Task Apify</h1>
+      <div className="todo-header">
+      <h1 className="todo-h1">RustyTodo</h1>
+      <img src="/rustImage.png" width={64}/>
+
+      </div>
+     
       <div className="input-section">
         <input type="text" id="todoInput" placeholder="Add item.." value={todoInput} onChange={(e)=>setTodoInput(e.target.value)}/>
         <button onClick={addTodo} className="add">
@@ -198,7 +204,7 @@ await axios.delete(`http://127.0.0.1:8080/todos/${id}`);
         <ul className="todo-list">{renderTodos(todos)}</ul>
         {
           todos.length == 0 &&(
-            <div style={{ textAlign: "center", fontWeight: "bold", marginTop: "20px" }}>
+            <div style={{color:"white",fontSize:"20px", textAlign: "center", fontWeight: "bold", marginTop:"50px" }}>
             No todos found
           </div>
           )
