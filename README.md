@@ -107,7 +107,7 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact  
 
 For questions or support, reach out to:  
-**Your Name**  Kazeem Lawal
+**Name**  Kazeem Lawal
 **Email**: quazeemastic@gmail.com  
 **GitHub**: [lawalstacks](https://github.com/lawalstacks)  
 
